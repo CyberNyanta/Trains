@@ -1,6 +1,8 @@
 ﻿{
   "supports": {},
-  "dependencies": {},
+  "dependencies": {
+    "Realm": "1.2.1"
+  },
   "frameworks": {
     ".NETPortable,Version=v4.5,Profile=Profile7": {}
   }

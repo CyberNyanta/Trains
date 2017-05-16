@@ -38,6 +38,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Models\Common\Car - Copy.cs" />
     <Compile Include="DAL\Models\Car.cs" />
     <Compile Include="DAL\Models\Reservation.cs" />
     <Compile Include="DAL\Models\Train.cs" />

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(NuGetPackageRoot)' == ''">
+    <NuGetPackageRoot>$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+  </PropertyGroup>
+  <ImportGroup>
+    <Import Project="$(NuGetPackageRoot)\Fody\2.0.6\build\portable-net+sl+win+wpa+wp\Fody.targets" Condition="Exists('$(NuGetPackageRoot)\Fody\2.0.6\build\portable-net+sl+win+wpa+wp\Fody.targets')" />
+    <Import Project="$(NuGetPackageRoot)\Realm\1.2.1\build\Realm.targets" Condition="Exists('$(NuGetPackageRoot)\Realm\1.2.1\build\Realm.targets')" />
+    <Import Project="$(NuGetPackageRoot)\Realm.Database\1.2.1\build\Realm.Database.targets" Condition="Exists('$(NuGetPackageRoot)\Realm.Database\1.2.1\build\Realm.Database.targets')" />
+  </ImportGroup>
+</Project>

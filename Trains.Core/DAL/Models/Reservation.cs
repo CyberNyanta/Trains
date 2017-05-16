@@ -8,6 +8,6 @@ namespace Trains.Core.DAL.Models
 {
     public class Reservation
     {
-           
+            
     }
 }

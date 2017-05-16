@@ -2,11 +2,151 @@
   "locked": false,
   "version": 2,
   "targets": {
-    ".NETPortable,Version=v4.5,Profile=Profile7": {}
+    ".NETPortable,Version=v4.5,Profile=Profile7": {
+      "Fody/2.0.6": {
+        "type": "package"
+      },
+      "Realm/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Realm.Database": "1.2.1"
+        },
+        "compile": {
+          "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac/Realm.Sync.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac/Realm.Sync.dll": {}
+        },
+        "native": {
+          "native/android/arm64-v8a/librealm-wrappers.so": {},
+          "native/android/armeabi-v7a/librealm-wrappers.so": {},
+          "native/android/x86/librealm-wrappers.so": {},
+          "native/android/x86_64/librealm-wrappers.so": {},
+          "native/ios/universal/librealm-wrappers.a": {}
+        }
+      },
+      "Realm.Database/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "2.0.6",
+          "Realm.DataBinding": "1.1.0"
+        },
+        "compile": {
+          "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac/Realm.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac/Realm.dll": {}
+        },
+        "native": {
+          "native/android/arm64-v8a/librealm-wrappers.so": {},
+          "native/android/armeabi-v7a/librealm-wrappers.so": {},
+          "native/android/x86/librealm-wrappers.so": {},
+          "native/android/x86_64/librealm-wrappers.so": {},
+          "native/ios/universal/librealm-wrappers.a": {},
+          "native/win32/x64/realm-wrappers.dll": {},
+          "native/win32/x86/realm-wrappers.dll": {}
+        }
+      },
+      "Realm.DataBinding/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/Realm.DataBinding.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Realm.DataBinding.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Fody/2.0.6": {
+      "sha512": "fz7S/XMyG0Vrb3naaWKVHAO9HyALGn9lYf+b+jHUmNkcUN5vG7JtBCiWwygEn4GqLbuFhyt840XWHGfzOXLTcg==",
+      "type": "package",
+      "files": [
+        "Content/FodyWeavers.xml",
+        "Fody.2.0.6.nupkg.sha512",
+        "Fody.dll",
+        "Fody.nuspec",
+        "Fody.pdb",
+        "FodyCommon.dll",
+        "FodyCommon.pdb",
+        "FodyIsolated.dll",
+        "FodyIsolated.pdb",
+        "Mono.Cecil.Mdb.dll",
+        "Mono.Cecil.Pdb.dll",
+        "Mono.Cecil.Rocks.dll",
+        "Mono.Cecil.dll",
+        "Tools/install.ps1",
+        "build/dotnet/Fody.targets",
+        "build/netstandard1.4/Fody.targets",
+        "build/portable-net+sl+win+wpa+wp/Fody.targets"
+      ]
+    },
+    "Realm/1.2.1": {
+      "sha512": "um+j99VAcauYO6BVRdRxDOEHLiq+Yk+4EwyZnRaZHCbA7tViinTWEAEdC2jb40u2NpJXLoVkz7h2XEPGa4pjNQ==",
+      "type": "package",
+      "files": [
+        "Realm.1.2.1.nupkg.sha512",
+        "Realm.nuspec",
+        "build/Realm.targets",
+        "lib/netstandard1.4/Realm.Sync.dll",
+        "lib/netstandard1.4/Realm.Sync.xml",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac/Realm.Sync.dll",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac/Realm.Sync.xml",
+        "native/android/arm64-v8a/librealm-wrappers.so",
+        "native/android/armeabi-v7a/librealm-wrappers.so",
+        "native/android/x86/librealm-wrappers.so",
+        "native/android/x86_64/librealm-wrappers.so",
+        "native/ios/universal/librealm-wrappers.a"
+      ]
+    },
+    "Realm.Database/1.2.1": {
+      "sha512": "q3CchKd1yBPhqdC1alt7na3/E+BHqz247Zcm7y5UG8qsmh6ei1hFEh230W8VoKNfm2JEQLF90aw8BjarWd9shw==",
+      "type": "package",
+      "files": [
+        "Realm.Database.1.2.1.nupkg.sha512",
+        "Realm.Database.nuspec",
+        "build/Realm.Database.targets",
+        "content/FodyWeavers.xml.install.xdt",
+        "content/FodyWeavers.xml.uninstall.xdt",
+        "lib/netstandard1.4/Realm.dll",
+        "lib/netstandard1.4/Realm.xml",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac/Realm.dll",
+        "lib/portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac/Realm.xml",
+        "native/android/arm64-v8a/librealm-wrappers.so",
+        "native/android/armeabi-v7a/librealm-wrappers.so",
+        "native/android/x86/librealm-wrappers.so",
+        "native/android/x86_64/librealm-wrappers.so",
+        "native/ios/universal/librealm-wrappers.a",
+        "native/win32/x64/realm-wrappers.dll",
+        "native/win32/x86/realm-wrappers.dll",
+        "tools/Mono.Cecil.Mdb.dll",
+        "tools/Mono.Cecil.Pdb.dll",
+        "tools/Mono.Cecil.Rocks.dll",
+        "tools/Mono.Cecil.dll",
+        "tools/Realm.BuildTasks.dll",
+        "tools/RealmWeaver.Fody.dll"
+      ]
+    },
+    "Realm.DataBinding/1.1.0": {
+      "sha512": "+e1dmrGXbWMr+UdrczI1F/2wagvVApBzgc6HWvylxsOBPyTrCBJKnhJbJhvoC9zKKhLpdrrw/kWhfDkumqcShQ==",
+      "type": "package",
+      "files": [
+        "Realm.DataBinding.1.1.0.nupkg.sha512",
+        "Realm.DataBinding.nuspec",
+        "lib/MonoAndroid44/Realm.DataBinding.dll",
+        "lib/MonoAndroid44/Realm.DataBinding.pdb",
+        "lib/Xamarin.iOS10/Realm.DataBinding.dll",
+        "lib/Xamarin.iOS10/Realm.DataBinding.pdb",
+        "lib/netstandard1.0/Realm.DataBinding.dll",
+        "lib/netstandard1.0/Realm.DataBinding.xml"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "": [],
+    "": [
+      "Realm >= 1.2.1"
+    ],
     ".NETPortable,Version=v4.5,Profile=Profile7": []
   }
 }
