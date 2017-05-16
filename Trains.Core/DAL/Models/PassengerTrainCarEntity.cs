@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Trains.Core.DAL.Models.Common;
 
 namespace Trains.Core.DAL.Models
 {
-    public class PassengerCar
+    public class PassengerTrainCarEntity : TrainCarEntity
     {
-        public int Id{ get; set; }
         public int SeatsCount { get; set; }
         public int ReservationsCount { get; set; }
         public int AvailableSeatsCount { get; set; }
-
     }
 }

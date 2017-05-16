@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Trains.Core.DAL.Models.Common;
 
 namespace Trains.Core.DAL.Models
 {
-    public class Train
+    public class TrainEntity: BaseEntity
     {
-        public int Number { get; set; }
-        public string Destination { get; set; }        
+        public int Number { get; set; }       
+        public string DeparturePoint { get; set; }
+        public string ArrivalePoint { get; set; }
         public DateTime DepartureDate { get; set; }
         public DateTime ArrivalDate { get; set; }
         public int CarCount { get; set; }
