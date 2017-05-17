@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using SQLite;
-using Trains.Core.DAL.Models.Common;
+using Trains.Core.DAL.Entities.Common;
 
 namespace Trains.Core.DL
 {

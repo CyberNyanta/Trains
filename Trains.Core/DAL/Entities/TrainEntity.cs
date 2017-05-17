@@ -1,7 +1,7 @@
 ﻿using System;
-using Trains.Core.DAL.Models.Common;
+using Trains.Core.DAL.Entities.Common;
 
-namespace Trains.Core.DAL.Models
+namespace Trains.Core.DAL.Entities
 {
     public class TrainEntity: BaseEntity
     {
@@ -10,7 +10,5 @@ namespace Trains.Core.DAL.Models
         public string ArrivalePoint { get; set; }
         public DateTime DepartureDate { get; set; }
         public DateTime ArrivalDate { get; set; }
-        public int CarCount { get; set; }
-        public int BookingCount { get; set; }
     }
 }

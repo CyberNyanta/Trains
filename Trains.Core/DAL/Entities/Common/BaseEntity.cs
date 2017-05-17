@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace Trains.Core.DAL.Models.Common
+namespace Trains.Core.DAL.Entities.Common
 {
     public class BaseEntity
     {

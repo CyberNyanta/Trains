@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Trains.Core.DAL.Models.Common;
+using Trains.Core.DAL.Entities.Common;
 using Trains.Core.DAL.Repositories.Contracts;
 using Trains.Core.DL;
 

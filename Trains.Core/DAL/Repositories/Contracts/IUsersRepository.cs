@@ -1,4 +1,4 @@
-﻿using Trains.Core.DAL.Models;
+﻿using Trains.Core.DAL.Entities;
 
 namespace Trains.Core.DAL.Repositories.Contracts
 {

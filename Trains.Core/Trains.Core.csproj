@@ -38,13 +38,21 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\Models\CarSeatEntity.cs" />
-    <Compile Include="DAL\Models\Common\BaseEntity.cs" />
-    <Compile Include="DAL\Models\Common\TrainCarEntity.cs" />
-    <Compile Include="DAL\Models\PassengerTrainCarEntity.cs" />
-    <Compile Include="DAL\Models\ReservationEntity.cs" />
-    <Compile Include="DAL\Models\TrainEntity.cs" />
-    <Compile Include="DAL\Models\UserEntity.cs" />
+    <Compile Include="BL\Contracts\ICarManager.cs" />
+    <Compile Include="BL\Contracts\IReservationManager.cs" />
+    <Compile Include="BL\Contracts\ITrainManager.cs" />
+    <Compile Include="BL\Models\BaseModel.cs" />
+    <Compile Include="BL\Models\Car.cs" />
+    <Compile Include="BL\Models\CarSeat.cs" />
+    <Compile Include="BL\Models\Reservation.cs" />
+    <Compile Include="BL\Models\Train.cs" />
+    <Compile Include="DAL\Entities\CarSeatEntity.cs" />
+    <Compile Include="DAL\Entities\Common\BaseEntity.cs" />
+    <Compile Include="DAL\Entities\Common\TrainCarEntity.cs" />
+    <Compile Include="DAL\Entities\PassengerTrainCarEntity.cs" />
+    <Compile Include="DAL\Entities\ReservationEntity.cs" />
+    <Compile Include="DAL\Entities\TrainEntity.cs" />
+    <Compile Include="DAL\Entities\UserEntity.cs" />
     <Compile Include="DAL\Repositories\BaseRepository.cs" />
     <Compile Include="DAL\Repositories\Contracts\ICarSeatsRepository.cs" />
     <Compile Include="DAL\Repositories\Contracts\IPassengerTrainCarsRepository.cs" />

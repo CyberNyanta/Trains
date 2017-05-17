@@ -1,6 +1,6 @@
-﻿using Trains.Core.DAL.Models.Common;
+﻿using Trains.Core.DAL.Entities.Common;
 
-namespace Trains.Core.DAL.Models
+namespace Trains.Core.DAL.Entities
 {
     public class PassengerTrainCarEntity : TrainCarEntity
     {
