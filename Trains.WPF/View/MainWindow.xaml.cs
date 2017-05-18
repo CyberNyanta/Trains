@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TinyIoC;
+using Trains.Core.BL;
+using Trains.Core.BL.Models;
 
 namespace Trains.WPF
 {
@@ -20,9 +23,23 @@ namespace Trains.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private TrainManager manager;
         public MainWindow()
         {
             InitializeComponent();
+            manager = TinyIoCContainer.Current.Resolve<TrainManager>();
+            projectDataGrid.ItemsSource = manager.GetAllTrains();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            manager.AddTrain(new Train
+            {
+                Number = 1234,
+                ArrivalDate = new DateTime(),
+                DepartureDate = new DateTime(),
+
+            });
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Trains.Core.BL.Contracts
 {
-    public class ITrainManager
+    public interface ITrainManager
     {
         
     }

@@ -46,6 +46,7 @@
     <Compile Include="BL\Models\CarSeat.cs" />
     <Compile Include="BL\Models\Reservation.cs" />
     <Compile Include="BL\Models\Train.cs" />
+    <Compile Include="BL\TrainManager.cs" />
     <Compile Include="DAL\Entities\CarSeatEntity.cs" />
     <Compile Include="DAL\Entities\Common\BaseEntity.cs" />
     <Compile Include="DAL\Entities\Common\TrainCarEntity.cs" />

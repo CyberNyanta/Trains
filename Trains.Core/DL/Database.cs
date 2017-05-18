@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using SQLite;
+using Trains.Core.BL.Models;
+using Trains.Core.DAL.Entities;
 using Trains.Core.DAL.Entities.Common;
 
 namespace Trains.Core.DL
@@ -11,17 +13,13 @@ namespace Trains.Core.DL
 
         private static object locker = new object();
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Tasker.DataLayer.TaskDatabase"/> TaskDatabase. 
-        /// if the database doesn't exist, it will create the database and all the tables.
-        /// </summary>
-        /// <param name='path'>
-        /// Path.
-        /// </param>
         public Database(string path) : base(path)
-        {                        
-            //CreateTable<Task>();
-            //CreateTable<Project>();           
+        {                                    
+            CreateTable<CarSeatEntity>();
+            CreateTable<ReservationEntity>();
+            CreateTable<PassengerTrainCarEntity>();
+            CreateTable<TrainEntity>();
+            CreateTable<UserEntity>();
         }
 
         public IEnumerable<T> GetItems<T>() where T : BaseEntity, new ()
