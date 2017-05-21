@@ -4,17 +4,36 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="525" Width="525"
+        Title="MainWindow" Height="450.477" Width="862.023"
         >
     <DockPanel >
-        <Button x:Name="button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="button_Click" DockPanel.Dock="Top">
-            <WrapPanel Orientation="Vertical">
-                <ContentControl Template="{StaticResource AddIcon}" />
-                <TextBlock Text="Додати потяг" Margin="1" HorizontalAlignment="Center"></TextBlock>
-            </WrapPanel>
-        </Button>
+        <DockPanel LastChildFill="False" VerticalAlignment="Top" DockPanel.Dock="Left" >
+            <Button x:Name="button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="button_Click" DockPanel.Dock="Top" Margin="10">
+                <WrapPanel Orientation="Vertical">
+                    <ContentControl Template="{StaticResource TrainIcon}" />
+                </WrapPanel>
+            </Button>
+            <Button x:Name="button1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="button_Click" DockPanel.Dock="Top"  Margin="10">
+                <WrapPanel Orientation="Vertical">
+                    <ContentControl Template="{StaticResource StatisticsIcon}" />
+                </WrapPanel>
+            </Button>
+            <Button x:Name="searchButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="button_Click" DockPanel.Dock="Top"  Margin="10">
+                <WrapPanel Orientation="Vertical">
+                    <ContentControl Template="{StaticResource SearchIcon}" />
+                </WrapPanel>
+            </Button>
+        </DockPanel>
 
+        <DockPanel DockPanel.Dock="Top"  Margin="0,0,10,0" FlowDirection="RightToLeft" >
+            <Button x:Name="add" HorizontalAlignment="Left" Width="30" Click="button_Click" DockPanel.Dock="Right"  Margin="10">
+                <WrapPanel Orientation="Vertical">
+                    <ContentControl Template="{StaticResource AddIcon}" HorizontalContentAlignment="Right" />
+                </WrapPanel>
+            </Button>
+        </DockPanel >
         <DataGrid  x:Name="projectDataGrid" DockPanel.Dock="Top"  />
+
     </DockPanel>
-   
+
 </Window>
