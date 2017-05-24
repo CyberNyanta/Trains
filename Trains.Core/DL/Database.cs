@@ -21,6 +21,7 @@ namespace Trains.Core.DL
             CreateTable<TrainEntity>();
             CreateTable<UserEntity>();
         }
+        
 
         public IEnumerable<T> GetItems<T>() where T : BaseEntity, new ()
         {
