@@ -7,7 +7,7 @@
         Title="MainWindow" Height="450.477" Width="862.023"
         >
     <DockPanel >
-        <DockPanel LastChildFill="False" DockPanel.Dock="Left" Margin="0,50,0,0" >
+        <DockPanel LastChildFill="False" DockPanel.Dock="Left" >
             <Button x:Name="button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="button_Click" DockPanel.Dock="Top" Margin="10">
                 <WrapPanel Orientation="Vertical">
                     <ContentControl Template="{StaticResource TrainIcon}" />
@@ -24,9 +24,9 @@
                 </WrapPanel>
             </Button>
         </DockPanel>
-        <TabControl  DockPanel.Dock="Top" BorderThickness="0" Background="Transparent">
+        <TabControl  DockPanel.Dock="Top" BorderThickness="0" >
 
-            <TabItem x:Name="trainstab" Header="Потяги" Foreground="WhiteSmoke">
+            <TabItem x:Name="trainstab" Header="Потяги" >
                 <DockPanel >
 
                     <DockPanel DockPanel.Dock="Top" Margin="0,0,0,0" FlowDirection="RightToLeft" >
@@ -47,8 +47,43 @@
                     <DataGrid  x:Name="projectDataGrid" DockPanel.Dock="Top"  />
                 </DockPanel>
             </TabItem>
-            <TabItem Header="Потягasи" Foreground="WhiteSmoke">
-                
+            <TabItem Header="Вагони" IsSelected="True" >
+                <DockPanel >
+
+                    <DockPanel DockPanel.Dock="Top" Margin="0,0,0,0" FlowDirection="RightToLeft" >
+
+                        <Button x:Name="delete_car" HorizontalAlignment="Left" Width="30"  Click="button_Delete" DockPanel.Dock="Left"  Margin="10">
+                            <WrapPanel Orientation="Vertical">
+                                <ContentControl Template="{StaticResource DeleteIcon}" HorizontalContentAlignment="Right" />
+                            </WrapPanel>
+                        </Button>
+                        <Button x:Name="add_train" HorizontalAlignment="Left" Width="30" Click="button_Click" DockPanel.Dock="Left"  Margin="10">
+                            <WrapPanel Orientation="Vertical">
+                                <ContentControl Template="{StaticResource AddIcon}" HorizontalContentAlignment="Right" />
+                            </WrapPanel>
+                        </Button>
+
+
+                    </DockPanel >
+                    <DataGrid  x:Name="carDataGrid" DockPanel.Dock="Top"  />
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="Пошук" IsSelected="True" >
+                <DockPanel >
+
+                    <DockPanel DockPanel.Dock="Top" Margin="0,0,0,0" FlowDirection="RightToLeft"  LastChildFill="True">
+
+                       
+                        <Button x:Name="search" HorizontalAlignment="Left" Width="30" Click="button_Click" DockPanel.Dock="Left"  Margin="10">
+                            <WrapPanel Orientation="Vertical">
+                                <ContentControl Template="{StaticResource SearchIcon}" HorizontalContentAlignment="Right" />
+                            </WrapPanel>
+                        </Button>
+                        <TextBox Text="Київ"  x:Name="DepartureLocation" TextAlignment="Right" FontSize="25"  DockPanel.Dock="Right"  Width="500"   Margin="10"/>
+
+                    </DockPanel >
+                    <DataGrid  x:Name="searchdata" DockPanel.Dock="Top"  />
+                </DockPanel>
             </TabItem>
         </TabControl>
               

@@ -146,10 +146,17 @@
     </ApplicationDefinition>
     <Compile Include="TinyIoC.cs" />
     <Compile Include="ViewModel\MainWindow.cs" />
+    <Compile Include="View\AddReservation.xaml.cs">
+      <DependentUpon>AddReservation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AddProject.xaml.cs">
       <DependentUpon>AddProject.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Styles\WindowStyle\WindowStyle.cs" />
+    <Page Include="View\AddReservation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AddProject.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

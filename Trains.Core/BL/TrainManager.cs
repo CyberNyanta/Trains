@@ -14,11 +14,18 @@ namespace Trains.Core.BL
     {
         private ITrainsRepository trainsRepository;
         private IPassengerTrainCarsRepository carsRepository;
+        private ICarSeatsRepository carSeatsRepository;
+        private IReservationRepository reservationRepository;
 
-        public TrainManager(IPassengerTrainCarsRepository carsRepository, ITrainsRepository trainsRepository)
+        public TrainManager(IPassengerTrainCarsRepository carsRepository, 
+            ITrainsRepository trainsRepository,
+            IReservationRepository reservationRepository, 
+            ICarSeatsRepository carSeatsRepository)
         {
             this.carsRepository = carsRepository;
             this.trainsRepository = trainsRepository;
+            this.reservationRepository = reservationRepository;
+            this.carSeatsRepository = carSeatsRepository;
         }
 
         public List<Train> GetAllTrains()

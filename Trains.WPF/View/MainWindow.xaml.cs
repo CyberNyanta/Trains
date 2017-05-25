@@ -30,8 +30,17 @@ namespace Trains.WPF
         {
             InitializeComponent();
             manager = TinyIoCContainer.Current.Resolve<TrainManager>();
-            projectDataGrid.ItemsSource = manager.GetAllTrains();
+            trains = manager.GetAllTrains();
+            projectDataGrid.ItemsSource = trains;
             projectDataGrid.MouseDoubleClick += open_Click;
+            searchdata.ItemsSource = trains;
+            searchdata.MouseDoubleClick += Searchdata_MouseDoubleClick;
+        }
+
+        private void Searchdata_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var addvindow = new Add_reservation();
+            addvindow.ShowDialog();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
