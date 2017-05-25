@@ -37,7 +37,23 @@
             </Grid>
         </Viewbox>
     </ControlTemplate>
-
+    <ControlTemplate x:Key="DeleteIcon">
+        <Viewbox Stretch="Uniform">
+        <Grid>
+            <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Collapsed" />
+            <Path Data="M19.277999,7.0630187L19.277999,27.739014 23.644004,27.739014 23.644004,7.0630187z M8.3530013,7.0630187L8.3530013,27.739014 12.720999,27.739014 12.720999,7.0630187z M8.6700027,0L23.329001,0 23.329001,3.4360048 32.000001,3.4360048 32.000001,7.0630187 29.330001,7.0630187 29.330001,32 2.6699982,32 2.6699982,7.0630187 0,7.0630187 0,3.4360048 8.6700027,3.4360048z" Stretch="Uniform" Fill="#FF01A5E2" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <TransformGroup.Children>
+                            <RotateTransform Angle="0" />
+                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                        </TransformGroup.Children>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+        </Grid>
+    </Viewbox>
+    </ControlTemplate>
     <ControlTemplate x:Key="AddIcon">
         <Viewbox Stretch="Uniform">
             <Grid>

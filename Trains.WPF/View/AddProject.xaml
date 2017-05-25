@@ -5,10 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="AddProject" Height="300" Width="300">
-    <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="196,229,0,0" VerticalAlignment="Top" Width="75"/>
-       
+    <StackPanel
+         Orientation="Vertical">
+        <Label Content="Номер:" HorizontalAlignment="Center"/>
+        <TextBox  x:Name="NUmber"/>
+        <Label Content="Точка відправлення:" HorizontalAlignment="Center"/>
+        <TextBox x:Name="DepartureLocation"/>
+        <Label Content="Точка призначення:" HorizontalAlignment="Center"/>
+        <TextBox x:Name="ArrivaleLocation"/>
+        <Label Content="Дата відправлення:" HorizontalAlignment="Center"/>
+        <TextBox x:Name="DepartureDate"/>
+        <Label Content="Дата прибуття:" HorizontalAlignment="Center"/>
+        <TextBox x:Name="ArricalDate"/>
+        <Button x:Name="add" HorizontalAlignment="Right" Width="30" Click="button_Click" DockPanel.Dock="Left"  Margin="10">
+            <WrapPanel Orientation="Vertical">
+                <ContentControl Template="{StaticResource AddIcon}" HorizontalContentAlignment="Right" />
+            </WrapPanel>
+        </Button>
+    </StackPanel>
 
-
-    </Grid>
 </Window>

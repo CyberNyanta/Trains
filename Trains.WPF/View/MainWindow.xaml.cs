@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using TinyIoC;
 using Trains.Core.BL;
 using Trains.Core.BL.Models;
+using Trains.WPF.View;
 
 namespace Trains.WPF
 {
@@ -24,22 +25,43 @@ namespace Trains.WPF
     public partial class MainWindow : Window
     {
         private TrainManager manager;
+        private List<Train> trains;
         public MainWindow()
         {
             InitializeComponent();
             manager = TinyIoCContainer.Current.Resolve<TrainManager>();
             projectDataGrid.ItemsSource = manager.GetAllTrains();
+            projectDataGrid.MouseDoubleClick += open_Click;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            manager.AddTrain(new Train
+            var addvindow = new AddProject();
+            addvindow.ShowDialog();
+            addvindow.Closed += (a, t) =>
             {
-                Number = 1234,
-                ArrivalDate = new DateTime(),
-                DepartureDate = new DateTime(),
+                projectDataGrid.ItemsSource = manager.GetAllTrains();
+            };
+        }
+        private void open_Click(object sender, RoutedEventArgs e)
+        {
+            if (projectDataGrid.SelectedIndex >= 0)
+            {
+                var addvindow = new AddProject();
+                addvindow.ShowDialog();
+                addvindow.Closed += (a, t) =>
+                {
+                    projectDataGrid.ItemsSource = manager.GetAllTrains();
+                };
+                addvindow.Train = trains[projectDataGrid.SelectedIndex];
+            }
+           
+        }
 
-            });
+
+        private void button_Delete(object sender, RoutedEventArgs e)
+        {
+            manager.RemoveTrain(projectDataGrid.SelectedIndex);
         }
     }
 }

@@ -38,5 +38,15 @@ namespace Trains.Core.BL
                 DepartureDate = train.DepartureDate
             });
         }
+
+        public void RemoveTrain(int id)
+        {
+            trainsRepository.Delete(id);
+        }
+
+        public void GetTrain(int id)
+        {
+            trainsRepository.GetById(id);
+        }
     }
 }
